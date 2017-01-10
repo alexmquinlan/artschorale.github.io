@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+	<title>Arts Chorale of Greater Lansing</title>
+	<!--
+		If you have any questions about the site, shoot an email to webmaster@umlyres.com!
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Overlock|Righteous|Unica+One" rel="stylesheet">
+	<meta author="Alex Quinlan">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id="outer">
+		<div id="inner">
+			<div id="welcome">
+				<div id="main-text">
+					<div id="welcome-center">
+						<div id="welcome-vert">
+							<div>Arts Chorale<br>of<br>Greater Lansing</div>
+						</div>
+					</div>
+				</div>
+				<nav id='nav'>
+					<div id="navBar-container">
+						<div id="navLinks-left" class="col-sm-5 navLinkBlocks">
+							<div class="navLink-container col-xs-6">
+								<a class="navLinks" href="#" name="events"><span class="vertAlign">Events</span></a>
+							</div>
+							<div class="navLink-container col-xs-6">
+								<a class="navLinks" href="#" name="music"><span class="vertAlign">Music</span></a>
+							</div>
+						</div>
+
+						<div class="col-sm-2 navLinkBlocks">
+							<a class="navLinks logo-hidden" id="logo" href="#" name="welcome"><span class="vertAlign">
+								<span id="navLinks-logo">ACGL</span>
+							</span></a>
+						</div>
+						<div id="navLinks-right " class="col-sm-5 navLinkBlocks">
+							<div class="navLink-container col-xs-6">
+								<a class="navLinks" href="#" name="about"><span class="vertAlign">About</span></a>
+							</div>
+							<div class="navLink-container col-xs-6">
+								<a class="navLinks" href="#" name="contact"><span class="vertAlign">Contact</span></a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+
+			<div id="events">
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('#main-text').height($('#welcome').height() - 120);
+			$('#nav').affix({
+		        offset: { top: $('#nav').offset().top }
+		    }).on('affix.bs.affix', function () {
+		        $('#navLinks-logo').fadeIn();
+		        $('#logo').removeClass('logo-hidden');
+		    }).on('affix-top.bs.affix', function () {
+		        $('#navLinks-logo').fadeOut();
+		        $('#logo').addClass('logo-hidden');
+		    });
+
+		    $(".navLinks").click(function() {
+		    	var name = $(this).attr('name');
+			    $('html, body').animate({
+			        scrollTop: $("#" + name).offset().top - 80
+			    }, 1500);
+			    return false;
+			});
+
+
+		});
+
+	</script>
+
+</body>
+</html>

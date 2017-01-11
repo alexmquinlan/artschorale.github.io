@@ -17,13 +17,14 @@ body {
 #welcome {
 	height: 100vh;
 	width: 100%;
-	color: #fd8c00;
+	color: #2B2D38;
 	font-family: 'Righteous';
 	letter-spacing: .2em;
 	font-size: 2em;
 	text-transform: uppercase;
-	background-color: #FDFFFC;
+	background-color: #003F8D;
 	text-align: center;
+	background-image:  radial-gradient(circle farthest-side at -10% 135%, #a7afb9, transparent);
 }
 
 #main-text {
@@ -35,7 +36,6 @@ body {
 #welcome-center {
 	display: table-cell;
 	vertical-align: middle;
-	color: #003F8D;
 	font-size: 1.66em;
 }
 
@@ -47,7 +47,7 @@ body {
 	font-family: 'Comfortaa';
 	font-size: 1em;
 	text-transform: uppercase;
-	background-color: rgba(253,255,252, 0.75);
+	background-color: rgba(253,255,252, 0);
 }
 
 #navBar-container {
@@ -70,7 +70,7 @@ body {
 
 #navLinks-logo {
 	display: none;
-	color: #003F8D;
+	color: #FF6700;
 	font-family: 'Righteous';
 	letter-spacing: .2em;
 	font-size: 1em;
@@ -129,9 +129,11 @@ body {
 /* affix */
 
 .affix {
-  top: 0;
-  width: 100%;
-  box-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+	top: 0;
+	width: 100%;
+	box-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+	background-color: #003F8D!important;
+	background-image: radial-gradient(circle farthest-side at -10% 135%, #a7afb9, transparent);
 }
 
 .affix-top {

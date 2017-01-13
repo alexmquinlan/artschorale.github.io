@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// set heights on window load //
-	$('#welcome').height($(window).height() + 80);
+	$('#welcome').height($(window).height() + 40);
 	$('#main-text').height($(window).height() - 120);
 	$('#about-content').height($('#about-acgl').height() - $('#about-header').height());
 

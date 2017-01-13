@@ -38,7 +38,7 @@ body {
 	display: table-cell;
 	vertical-align: middle;
 	color: #003F8D;
-	font-size: 1.66em;
+	font-size: 1.2em;
 }
 
 #welcome-border {
@@ -54,6 +54,8 @@ body {
 	color: #8F9491;
 	text-transform: uppercase;
 	padding-top: 50px;
+	width: 95%;
+	margin: 0 auto;
 }
 
 #sub-text {
@@ -192,6 +194,9 @@ body {
 
 	#welcome-border {
 		width: 45%;
+	}
+	#welcome-center {
+		font-size: 1.66em;
 	}
 	#nav {
 		font-size: 1em;

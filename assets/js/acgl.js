@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 	setTimeout(function() {
 		$('#sub-text').css('opacity',0).animate({opacity:1}, 1000);
-	}, 1500);
+	}, 1250);
 
 
 	$('#nav').affix({

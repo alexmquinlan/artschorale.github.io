@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	background-color: #FDFFFC;
+	position: relative;
 }
 
 #outer {
@@ -17,14 +18,14 @@ body {
 #welcome {
 	height: 100vh;
 	width: 100%;
-	color: #2B2D38;
+	color: #fd8c00;
 	font-family: 'Righteous';
 	letter-spacing: .2em;
 	font-size: 2em;
 	text-transform: uppercase;
-	background-color: #003F8D;
+	background-color: #FDFFFC;
+	/*background-image:  radial-gradient(circle farthest-side at 100% -25%, #8F9491, transparent);*/
 	text-align: center;
-	background-image:  radial-gradient(circle farthest-side at -10% 135%, #a7afb9, transparent);
 }
 
 #main-text {
@@ -36,7 +37,27 @@ body {
 #welcome-center {
 	display: table-cell;
 	vertical-align: middle;
+	color: #003F8D;
 	font-size: 1.66em;
+}
+
+#welcome-border {
+	width: 45%;
+	margin: 0 auto;
+	/*border: 10px solid #003F8D;*/
+}
+
+/* Subtitle */
+#welcome-sub {
+	font-family: 'Comfortaa';
+	font-size: .4em;
+	color: #8F9491;
+	text-transform: uppercase;
+	padding-top: 50px;
+}
+
+#sub-text {
+	opacity: 0;
 }
 
 /* Navbar */
@@ -45,9 +66,9 @@ body {
 	width: 100%;
 	height: 80px;
 	font-family: 'Comfortaa';
-	font-size: 1em;
+	font-size: .85em;
 	text-transform: uppercase;
-	background-color: rgba(253,255,252, 0);
+	background-color: rgba(253,255,252, 0.9);
 }
 
 #navBar-container {
@@ -70,7 +91,7 @@ body {
 
 #navLinks-logo {
 	display: none;
-	color: #FF6700;
+	color: #003F8D;
 	font-family: 'Righteous';
 	letter-spacing: .2em;
 	font-size: 1em;
@@ -90,20 +111,73 @@ body {
 }
 
 
-/* Events Page */
+/* About Page */
 
-#events {
-	background-image: url("../images/fullChoir.jpg");
-	background-color: #FDFFFC;
+#about {
+	background-color: orange;
+	width: 100%;
+	height: 1000px;
+}
+
+#about-acgl {
+	background-image: url("../images/fullChoir2.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-attachment: fixed;
-	width: 100%;
 	height: 550px;
+	width: 100%;
+	box-shadow: .5px rgba(0,0,0,0.5);
 }
 
+#about-blur {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0, 0.42);
+	font-family: 'Unica One';
+	font-size: 1.5em;
+	color: white;
+	text-transform: uppercase;
+}
 
+#about-header {
+	font-family: 'Unica One';
+	font-size: 3em;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.about-underline {
+	width: 0;
+	text-align: center;
+	color: white;
+	margin: 0 auto;
+}
+
+#about-content {
+	width: 100%;
+	height: 100%;
+	display: table;
+	text-align: center;
+}
+
+#about-vert {
+	width:100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;	
+}
+
+#about-text {
+	width: 75%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#about-leadership {
+	width: 100%;
+	height: 100%;
+}
 
 
 
@@ -121,7 +195,7 @@ body {
 	text-decoration: none;
 	color: #FF6700;
 }
-.navLinks:active{
+.navLinks:active, .navLinks.active{
 	color: #FF6700;
 }
 
@@ -129,11 +203,9 @@ body {
 /* affix */
 
 .affix {
-	top: 0;
-	width: 100%;
-	box-shadow: 1px 1px rgba(0, 0, 0, 0.15);
-	background-color: #003F8D!important;
-	background-image: radial-gradient(circle farthest-side at -10% 135%, #a7afb9, transparent);
+  top: 0;
+  width: 100%;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .affix-top {

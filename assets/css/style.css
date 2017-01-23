@@ -1,7 +1,27 @@
 body {
 	margin: 0;
-	background-color: #FDFFFC;
 	position: relative;
+	background-color: #eeeeee!important;
+}
+
+div {
+	width: 100%;
+}
+
+/* general settings */
+
+.vert {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.center {
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
 
 #outer {
@@ -71,6 +91,8 @@ body {
 	font-size: .5em;
 	text-transform: uppercase;
 	background-color: rgba(253,255,252, 0.9);
+	z-index: 9999;
+	overflow: hidden;
 }
 
 #navBar-container {
@@ -118,15 +140,16 @@ body {
 #about {
 	background-color: orange;
 	width: 100%;
-	height: 1000px;
+	min-height: 1100px;
 }
 
 #about-acgl {
-	background-image: url("../images/fullChoir2.jpg");
+	background-image: url("../images/fullChoir.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 675px;
+	background-attachment: fixed;
+	min-height: 675px;
 	width: 100%;
 	box-shadow: .5px rgba(0,0,0,0.5);
 }
@@ -178,9 +201,222 @@ body {
 
 #about-leadership {
 	width: 100%;
+	min-height: 550px;
+	font-size: 1.3em;
+}
+
+.leadership-row {
+	height: 48%;
+	width: 100%;
+	margin: 1% 0;
+}
+
+#lead-header {
+	font-family: 'Unica One';
+	font-size: 1.85em;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.leadership-box-outer {
+	height: 33%;
+	padding: 0!important;
+}
+
+.leadership-box {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 1;
+}
+
+.leadership-box-inner {
+	width: 165px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 6px 0;
+	background-color: orange;
+}
+
+.leadership-bio {
+	display: none;
 	height: 100%;
 }
 
+.leadership-box-inner:hover {
+	box-shadow: 4px 4px 14px rgba(0,0,0,0.16);
+}
+
+.image-holder {
+	height: 70%;
+}
+
+.leadership-label {
+	height: 30%;
+}
+
+.leadership-images {
+	height: 150px;
+	width: 150px;
+	border-radius: 200px;
+	margin: 0 auto;
+}
+
+
+/* Membership Page */
+
+#membership {
+	width: 100%;
+	height: 500px;
+}
+
+.construction {
+	border: 0.5px solid;
+	border-color: black;
+	background-color: white;
+}
+
+/* Music Page */
+
+#music {
+	width: 100%;
+	min-height: 600px;
+	background-color: #eeeeee;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+#music-header {
+	font-size: 1.85em;
+	width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	box-shadow: 1px 1px rgba(0,0,0, 0.9);
+	background-color: #235789;
+	color: white;
+	z-index: 10;
+}
+
+#music-content {
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	color: white;
+}
+
+#music-split {
+	width: 100%;
+	height: 100%;
+}
+
+.music-side {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+	padding: 0!important;
+}
+
+#music-left {
+	/* Material Design Idea 
+	background-color: #E53935;
+	background-image: url("../images/pine-tree2.png");
+	background-position: 50% 117%;
+	background-repeat: no-repeat;
+	overflow: hidden;*/
+	background-image: url("../images/riverTerraceChurch.jpg");
+	background-color: black;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+#music-right {
+	/* Material Design Idea 
+	background-color: #2E7D32;
+	background-image: url("../images/church2.png");
+	background-position: 50% 117%;
+	background-repeat: no-repeat;
+	overflow: hidden;*/
+	background-image: url("../images/universityLutheranChurch.jpg");
+	background-position: center;
+	background-size: 100% 102%;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+.music-vert {
+	width: 100.1%;
+	height: 100%;
+	display: table;
+	background-color: rgba(0,0,0, 0.5);
+}
+
+.music-center {
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.music-text {
+	font-size: 1em;
+	font-family: 'Comfortaa';
+}
+
+/* Contact Page */
+
+#contact {
+	width: 100%;
+	height: 500px;
+}
+
+/* Footer */
+
+#footer {
+	height: 250px;
+	background-color: #fafafa;
+}
+
+
+
+
+.imgWrap {
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+	border-radius: 200px;
+
+
+  visibility: hidden;
+  opacity: 0;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
 
 
 
@@ -205,7 +441,7 @@ body {
 		height: 100%;
 	}
 	#about-acgl {
-		height: 550px;
+		min-height: 550px;
 	}
 	#about-header {
 		font-size: 3em;
@@ -216,8 +452,26 @@ body {
 	#about-text {
 		width: 75%;
 	}
+	.leadership-box-outer {
+		height: 100%;
+	}
+	#music {
+		min-height: 500px;
+	}
+	.music-side {
+		height: 100%;
+		overflow: hidden;
+	}
+	.music-text {
+		font-size: 2em;
+	}
 
 }
+
+/*.music-side:hover .music-vert{
+	transition: all .5s ease-in-out;
+  transform: scale(1.2);
+}*/
 
 
 
@@ -236,6 +490,21 @@ body {
 }
 .navLinks:active, .navLinks.active{
 	color: #FF6700;
+}
+
+.location-links:link{
+  text-decoration: none;
+  color: white;
+}
+.location-links:visited {
+  color: white;
+}
+.location-links:hover{
+	text-decoration: underline;
+	color: rgba(255,255,255,0.95);
+}
+.location-links:active{
+	color: rgba(255,255,255,0.8);
 }
 
 

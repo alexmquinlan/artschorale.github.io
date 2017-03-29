@@ -3,7 +3,7 @@ $(document).ready(function() {
 	// set heights on window load //
 	$('#welcome').height($(window).height() + 40);
 	$('#main-text').height($(window).height() - 120);
-	$('#about-content').height($('#about-acgl').height() - $('#about-header').height());
+	$('#about-content').height($('#about-blur').height() - $('#about-header').height());
 	$('#lead-content').height($('#about-leadership').height() - $('#lead-header').height());
 	$('#music-content').height($('#music').height() - $('#music-header').height());
 
@@ -33,27 +33,44 @@ $(document).ready(function() {
 
 	var activeProfile = '';
 	var innerMargins = $('.leadership-box-inner').css('margin');
+	var currentBG = '#CAEBF2';
 
 	$('.leadership-box-inner').click(function() {
 		var current = $(this).attr("name");
 		var parent = $(this).parent();
 		if (activeProfile === current) {
 			$(this).animate({margin:innerMargins}, 500, 'swing');
-			$(this).parent().animate({backgroundColor: "#FFA500"}, 500);
+			$(this).parent().animate({backgroundColor: currentBG}, 500);
 			$('.leadership-bio').fadeOut();
 			//$(this).parent().css('backgroundColor', 'orange');
 			activeProfile = '';
 		}
 		else {
 			$("[name='"+activeProfile+"']").animate({margin:innerMargins}, 500, 'swing')
-				.parent().animate({backgroundColor: "#FFA500"}, 500);
+				.parent().animate({backgroundColor: currentBG}, 500);
 			$(this).animate({margin:"0"}, 500, 'swing');
 			//$(this).parent().css('backgroundColor', 'blue')
 			$(this).parent().animate({backgroundColor: "rgba(0,0,0,0.45)"}, 500);
 			$('.leadership-bio').fadeOut();
 			activeProfile = current;
 		}
-	})
+	});
+
+    var currentAudio = "AM";
+    $('.audio-tracks').click(function() {
+
+        if ($(this).attr("id") !== currentAudio) {
+            var audio = $("#music-player");
+            var url = $(this).attr("name");
+            $("#music-source").attr("src", url);
+
+            audio[0].pause();
+            audio[0].load();
+            audio[0].oncanplaythrough = audio[0].play();
+            currentAudio = $(this).attr("id");
+        }
+
+    });
 
 
     if ($('#nav').hasClass('affix')) {
@@ -114,6 +131,57 @@ $(document).ready(function() {
     else if ($(this).scrollTop() > contactTop && $(this).scrollTop() < contactBot) {
 		$('#linkcontact').addClass('active');
     }
+
+
+
+    /* Color Selection */
+
+    $('.color-links').click(function() {
+    	var scheme;
+    	if ($(this).attr('name') == "orig") {
+    		scheme = {
+    			"#welcome~f~color":"#fd8c00",
+    			"#welcome~f~background-color":"#FDFFFC",
+    			"#welcome-center~f~color":"#003F8D",
+    			"#nav~f~background-color":"#FDFFFC",
+    			"#navLinks-logo~f~color":"#003F8D",
+    			".navLinks:link~f~color":"#2B2D38",
+    			".navLinks:hover~hover~color":"#FF6700",
+    			".active~f~color":"#FF6700",
+    			"#about~f~background-color":"orange",
+    			".leadership-box1~f~background-color":"orange",
+    			".leadership-box-inner1~f~background-color":"orange"
+    		}
+    		currentBG = "#FFA500";
+    	}
+    	else if ($(this).attr('name') == 'red') {
+    		scheme = {
+    			"#welcome~f~color":"#A9A9A9",
+    			"#welcome~f~background-color":"#EFEFEF",
+    			"#welcome-center~f~color":"#3E3E3E",
+    			"#nav~f~background-color":"#EFEFEF",
+    			"#navLinks-logo~f~color":"#3E3E3E",
+    			".navLinks:link~f~color":"#FB3B3F",
+    			".navLinks:hover~hover~color":"#A9A9A9",
+    			".active~f~color":"#A9A9A9",
+    			"#about~f~background-color":"#CAEBF2",
+    			".leadership-box1~f~background-color":"#CAEBF2",
+    			".leadership-box-inner1~f~background-color":"#CAEBF2"
+    		} 
+    		currentBG = "#CAEBF2";
+    	}
+    	var name = "";
+    	var id = "";
+    	var prop = "";
+    	for (var x in scheme) {
+    		var arr = x.split("~");
+    		name 	= arr[0];
+    		id 		= arr[1];
+    		prop	= arr[2];
+    		$(name).css(prop,scheme[x]);
+    	}	
+    	return false;
+    });
 
 
 });

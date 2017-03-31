@@ -64,9 +64,14 @@ $(document).ready(function() {
             var url = $(this).attr("name");
             $("#music-source").attr("src", url);
 
+            $('#current-song').html($(this).html());
+
             audio[0].pause();
             audio[0].load();
             audio[0].oncanplaythrough = audio[0].play();
+
+            $('#'+currentAudio).removeClass('active-song');
+            $(this).addClass('active-song');
             currentAudio = $(this).attr("id");
         }
 

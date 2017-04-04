@@ -56,6 +56,22 @@ $(document).ready(function() {
 		}
 	});
 
+    var activeSection = "sopranos";
+    var caret = '   <span class="caret"></span>';
+    $('.section-select').click(function() {
+        var selected = $(this);
+        var section = selected.html();
+        if (section != activeSection) {
+
+            $('#'+activeSection).removeClass('active-section');
+            $('#'+section).addClass('active-section');
+            $('#section-btn').html(section.charAt(0).toUpperCase() + section.slice(1) + caret);
+            activeSection = section;
+        }
+        $('#section-btn').dropdown('toggle');
+        return false;
+    });
+
     var currentAudio = "AM";
     $('.audio-tracks').click(function() {
 

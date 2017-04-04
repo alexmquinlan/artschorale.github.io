@@ -300,8 +300,56 @@ div {
 
 #membership {
 	width: 100%;
-	height: 500px;
+	height: 700px;
+	background-color: #fff;
+	overflow: hidden;
 }
+#membership-header {
+	width: 95%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+	color: #3E3E3E;
+	font-size: 1.5rem;
+}
+#membership-header-text {
+	font-size: 3.5rem;
+	color: #FB3B3F;
+}
+#membership-content {
+	height: auto;
+}
+#dropdown-container {
+	display: block;
+	text-align: center;
+}
+#dropdown-button {
+	width:auto;
+	margin: 0 auto;
+}
+.section {
+	width:100%;
+	height:100%;
+	text-align: center;
+	display:none;
+}
+.active-section {
+	display: block;
+}
+.section-label {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	color: #FB3B3F;
+	margin-top:1em;
+}
+.scholarship {
+	color: rgb(13,177,75);
+}
+.exec {
+	color: rgb(0,0,204);
+}
+
 
 .construction {
 	border: 0.5px solid;
@@ -506,6 +554,22 @@ div {
 	}
 	#about-leadership {
 		min-height: 400px;
+	}
+	#membership {
+		height: 625px;
+	}
+	#membership-header {
+		width: 95%;
+	}
+	#dropdown-container {
+		display: none;
+		margin-top:0;
+	}
+	.section {
+		display: block;
+	}
+	.section-label {
+		margin:0;
 	}
 	#music {
 		min-height: 500px;

@@ -501,7 +501,7 @@ div {
 
 #contact {
 	width: 100%;
-	height: 500px;
+	height: 800px;
 }
 
 /* Footer */
@@ -509,6 +509,11 @@ div {
 #footer {
 	height: 250px;
 	background-color: #1f1f1f;
+}
+
+#footer-logo {
+	height:100px;
+	width: 200px;
 }
 
 
@@ -594,16 +599,19 @@ div {
 		height: 100%;
 	}
 
+	#contact {
+		height: 500px;
+	}
 }
 
 
 /* Link Styling */
 
-.navLinks:link{
+.navLinks:link, .contactLinks:link {
   text-decoration: none;
   color: /*#2B2D38*/ #FB3B3F;
 }
-.navLinks:visited {
+.navLinks:visited, .contactLinks:visited {
   color: /*#2B2D38*/ #FB3B3F;
 }
 .navLinks:hover{
@@ -612,6 +620,15 @@ div {
 }
 .navLinks:active, .navLinks.active{
 	color: /*#FF6700*/ #3E3E3E;
+}
+
+.contactLinks:hover {
+	text-decoration: underline;
+	color: #FB3B3F;
+}
+.navLinks:active {
+	text-decoration: none;
+	color: #FB3B3F;
 }
 
 .location-links:link{

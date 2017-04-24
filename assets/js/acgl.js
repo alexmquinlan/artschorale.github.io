@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
+    var windowWidth = $(window).width();
+
 	// set heights on window load //
 	$('#welcome').height($(window).height() + 40);
 	$('#main-text').height($(window).height() - 120);
 	$('#about-content').height($('#about-blur').height() - $('#about-header').height());
-	$('#lead-content').height($('#about-leadership').height() - $('#lead-header').height());
+	$('#lead-content').css('min-height',$('#about-leadership').height() - $('#lead-header').height());
 	$('#music-content').height($('#music').height() - $('#music-header').height());
 
 	setTimeout(function() {
@@ -23,7 +25,7 @@ $(document).ready(function() {
     });
 
 
-    $(".navLinks").click(function() {
+    $(".navLinks, #footerLogoLink").click(function() {
     	var name = $(this).attr('name');
 	    $('html, body').animate({
 	        scrollTop: $("#" + name).offset().top - 80
@@ -65,11 +67,28 @@ $(document).ready(function() {
 
             $('#'+activeSection).removeClass('active-section');
             $('#'+section).addClass('active-section');
-            $('#section-btn').html(section.charAt(0).toUpperCase() + section.slice(1) + caret);
+            $('#section-btn').html(section.toUpperCase() + caret);
             activeSection = section;
         }
         $('#section-btn').dropdown('toggle');
         return false;
+    });
+
+    if (windowWidth <= 768) {
+        $('.leadership-bio').removeClass('in');
+    }
+
+    var activeBio = '';
+    $('.bio-collapse').click(function() {
+        var id = $(this).attr('data-target');
+        $(id).collapse();
+        var arrow = $(this).find('span');
+        if (arrow.hasClass('glyphicon-menu-down')) {
+            arrow.removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+        }
+        else {
+            arrow.removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+        }
     });
 
     var currentAudio = "AM";

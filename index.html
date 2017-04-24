@@ -103,16 +103,20 @@
 							<div class="leadership-box-inner1">
 								<div class="image-holder1" name="bartlett">
 									<div class="image-holder">
-									<img class="leadership-images" src="assets/images/daleCropped.png" onerror="this.src='assets/images/maleDefault.png'"/>
+									<img class="leadership-images" src="assets/images/daleConductingCropped.png" onerror="this.src='assets/images/maleDefault.png'"/>
 									</div>
 									<div class="leadership-label">
 									Dale Bartlett <br> Conductor
 									</div>
+									<div class="col-xs-12 bio-collapse" name="bartlett" data-toggle="collapse" data-target="#dale-bio">
+										<div class="bio-collapse-label">Bio</div>
+										<span class="glyphicon glyphicon-menu-down bio-collapse-arrow pull-right"></span>
+									</div>
 									<hr style="width:80%;">
 								</div>
-								<div class="leadership-bio">
+								<div class="leadership-bio collapse in" id="dale-bio" >
 									<p>
-									Dale is the former director of choirs at MSU
+									Dale Bartlett has conducted the Arts Chorale of Greater Lansing since 1983 and is completing his 34th year. Dr. Bartlett joined the Michigan State University School of Music faculty in 1969. He is currently Professor Emeritus, having retired in 1996. During his tenure at MSU, he served the School of Music as Assistant and Associate Director for 13 years. Although his professional performance career primarily has included French horn, he has been involved in choral music as conductor of church choirs since 1955, serving as music director at the University Lutheran Church in East Lansing from 1972 through 1982. He conducted the MSU Collegiate Choir for two years (1978-1980) before joining the Chorale as its conductor.
 									</p>
 								</div>
 							</div>
@@ -121,16 +125,20 @@
 							<div class="leadership-box-inner1">
 								<div class="image-holder1" name="kabodian">
 									<div class="image-holder">
-									<img class="leadership-images" src="assets/images/kabodian.jpg" onerror="this.src='assets/images/femaleDefault.png'"/>
+									<img class="leadership-images" src="assets/images/kabodianCropped.png" onerror="this.src='assets/images/femaleDefault.png'"/>
 									</div>
 									<div class="leadership-label">
 									Judy Kabodian <br> Accompanist
 									</div>
+									<div class="col-xs-12 bio-collapse" data-toggle="collapse" data-target="#judy-bio" name="kabodian">
+										<div class="bio-collapse-label">Bio</div>
+										<span class="glyphicon glyphicon-menu-down bio-collapse-arrow pull-right"></span>
+									</div>
 									<hr style="width:80%; background-color:#00b3b3;">
 								</div>
-								<div class="leadership-bio">
+								<div class="leadership-bio collapse in" id="judy-bio">
 									<p>
-										Judy is really really good at piano
+										Judy Kabodian is completing her 25th year as the accompanist for the Arts Chorale of Greater Lansing. She received her Bachelor's Degree in organ performance from Michigan State University in 1982. She has been a church organist for over 30 years and currently is the organist at The Peoples Church in East Lansing. Judy is the former accompanist for the MSU University Chorale, the MSU Children's Choir and East Lansing High School choirs. She continues to be in demand as an accompanist in the Greater Lansing area. 
 									</p>
 								</div>
 							</div>
@@ -147,7 +155,7 @@
 					</div>
 					<hr style="width: 50%; margin: 10px auto; border-color: #8F9491;">
 
-					<div class="vert">
+					<div class="vert" id="membership-subtext">
 						<div class="center">
 							The Arts Chorale is always looking for new, experienced singers! Auditions are required with our conductor Dale Bartlett, so please email <a href="mailto:isingsop@aol.com">Carole Marvin</a> if you would like to set up an audition.
 							<br>
@@ -158,7 +166,7 @@
 					<div id="dropdown-container" class="visible-xs-12">
 						<div id="dropdown-button" class="btn-group">
 						  <button id="section-btn" type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    Sopranos   <span class="caret"></span>
+						    SOPRANOS   <span class="caret"></span>
 						  </button>
 						  <ul class="dropdown-menu">
 						    <li><a href="#" class="section-select">sopranos</a></li>
@@ -244,7 +252,7 @@
 						</div>						
 					</div>
 				</div>
-					<div class="col-xs-12">
+					<div class="col-xs-12" id="membership-key">
 						<div class="pull-right">
 							<span class="scholarship">* - Indicates a Scholarship Student</span><br>
 							<span class="exec">* - Indicates a member of the Executive Board</span>
@@ -344,13 +352,6 @@
 							</p>
 						</div>
 						<div class="col-xs-12 col-sm-4">
-							<span class="fa fa-facebook-f fa-5x"></span><br>Like Us on Facebook!
-							<p><br>
-							Like us on Facebook to get updates about upcoming concerts and events in the community!
-							</p>
-							<a class="btn btn-default" href="https://www.facebook.com/artschorale/" target="_blank">Facebook</a>
-						</div>
-						<div class="col-xs-12 col-sm-4">
 						<span class="fa fa-money fa-5x"></span><br>Donate
 							<p><br>The Arts Chorale would like to thank all those who support us by their presence at our concerts, by contributing cash donations or placing ads in our programs. We hope you will support these businesses that are so generously supporting us. Click <a class="contactLinks" href="assets/images/sponsors.pdf">here</a> for a list of current Chorale sponsors.</p>
 							<p>All other donations may be sent to:<br>
@@ -359,6 +360,13 @@
 								Holt, MI 48842<br>
 								email: <a class="contactLinks" href="mailto:isingsop@aol.com">isingsop@aol.com</a><br><br>
 								All donations are tax deductible.
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<span class="fa fa-facebook-f fa-5x"></span><br>Like Us on Facebook!
+							<p><br>
+							Like us on Facebook to get updates about upcoming concerts and events in the community!
+							</p>
+							<a class="btn btn-default" href="https://www.facebook.com/artschorale/" target="_blank">Facebook</a>
 						</div>
 					</div>
 				</div>
@@ -371,7 +379,7 @@
 					<div class="col-xs-12 col-sm-4" style="height:100%;">
 						<div style="width:100%; height:100%; display: table;">
 						<div style="margin:0 auto; height:100%; text-align: center; display:table-cell;vertical-align: middle;">
-							<a href="#welcome"><img id="footer-logo" src="assets/images/acglLogo_White.png"/></a>
+							<a href="#" id="footerLogoLink" name="welcome"><img id="footer-logo" src="assets/images/acglLogo_White.png"/></a>
 						</div>
 						</div>
 					</div>
